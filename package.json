@@ -32,7 +32,11 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "yarn lint",
+      "eslint --fix",
+      "yarn fmt"
+    ],
+    "pages/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
       "yarn fmt"
     ]
   }
